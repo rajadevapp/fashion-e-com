@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-com</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+</head>
+<body>
+    <!-- announcement bar -->
+    <div class="display-flex shipping-bar">
+        <div class="display-flex shipping-msg ">
+            <p>Free shipping on orders over ₹1,999  <span style="padding: 0px 15px">|</span> Explore the new collection</p>
+            <!-- <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18M6 6l12 12" />
+                </svg>
+            </div> -->
+        </div>
+    </div>
+    <!-- nav bar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="./images/logo.svg" alt="logo"/>
+        </div>
+        <div class="links">
+            <ul class="display-flex">
+                <li>
+                    <a href="#hero">Home</a>
+                </li>
+                <li>
+                    <a href="#collections">Collections</a>
+                </li>
+                <li>
+                    <a href="./product.html">Shop</a>
+                </li>
+                <li>
+                    <a href="./contact-us.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-actions">
+            <a href="#" class="nav-icon" id="wishlist-toggle"
+               aria-label="Wishlist">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7
+                    10.9 4.6a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5
+                    1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/>
+                </svg>
+        
+                <span class="count-badge wishlist-badge" id="wishlist-count">0</span>
+                <span class="icon-label">Wishlist</span>
+            </a>
+        
+            <a href="#" class="nav-icon" id="cart-toggle"
+               aria-label="Shopping bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 8h14l1 13H4L5 8Z"/>
+                    <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+                </svg>
+        
+                <span class="count-badge add-card-badge" id="cart-count">0</span>
+                <span class="icon-label">Cart</span>
+            </a>
+        </div>
+    </div>
+    <aside class="side-panel" id="wishlist-sidebar">
+        <div class="panel-header">
+            <h2>My Wishlist</h2>
+            <button class="close-panel" aria-label="Close">&times;</button>
+        </div>
+    
+        <div class="panel-items" id="wishlist-items"></div>
+    </aside>
+    
+    <aside class="side-panel" id="cart-sidebar">
+        <div class="panel-header">
+            <h2>My Shopping Bag</h2>
+            <button class="close-panel" aria-label="Close">&times;</button>
+        </div>
+    
+        <div class="panel-items" id="cart-items"></div>
+    
+        <div class="cart-footer">
+            <p>Subtotal: <strong id="cart-total">₹0</strong></p>
+        </div>
+    </aside>
+    <div class="panel-overlay" id="panel-overlay"></div>
+    <!-- hero-section -->
+    <section id="hero" class="hero-slider">
+        <div class="hero-slides">
+            <!-- Slide 1 -->
+            <article class="hero-slide active">
+                <img src="images/hero-4.jpg"
+                    alt="New season fashion collection">
+
+                <div class="hero-content">
+                    <span class="hero-tag">THE NEW SEASON</span>
+                    <h1>Style that<br>speaks.</h1>
+                    <p>
+                        Discover timeless essentials and
+                        modern styles for every occasion.
+                    </p>
+                    <a href="./product.html" class="hero-btn">
+                        Explore Collection
+                        <span>↗</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Slide 2 -->
+            <article class="hero-slide">
+                <img src="images/hero-5.jpg"
+                    alt="Elegant everyday fashion">
+
+                <div class="hero-content">
+                    <span class="hero-tag">EFFORTLESS ELEGANCE</span>
+                    <h1>Less, but<br>better.</h1>
+                    <p>
+                        Elevated essentials made for
+                        your everyday wardrobe.
+                    </p>
+                    <a href="./product.html" class="hero-btn">
+                        Discover More
+                        <span>↗</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Slide 3 -->
+            <article class="hero-slide">
+                <img src="images/hero-2.jpg"
+                    alt="Premium fashion collection">
+
+                <div class="hero-content">
+                    <span class="hero-tag">THE SIGNATURE EDIT</span>
+                    <h1>Make it<br>your moment.</h1>
+                    <p>
+                        Contemporary silhouettes.
+                        Timeless confidence.
+                    </p>
+                    <a href="./product.html" class="hero-btn">
+                        Shop the Edit
+                        <span>↗</span>
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <button class="slider-arrow prev" aria-label="Previous slide">←</button>
+        <button class="slider-arrow next" aria-label="Next slide">→</button>
+        <div class="slider-dots" aria-label="Choose slide">
+            <button class="slider-dot active" aria-label="Slide 1"></button>
+            <button class="slider-dot" aria-label="Slide 2"></button>
+            <button class="slider-dot" aria-label="Slide 3"></button>
+        </div>
+    </section>
+    <!-- Brand section -->
+    <section id="brand">
+        <div class="brand">
+            <div>
+                <p>ZARA</p>
+            </div>
+            <div>
+                <p>Mango</p>
+            </div>
+            <div>
+                <p>COS</p>
+            </div>
+            <div>
+                <p>Massimo Dutti</p>
+            </div>
+            <div>
+                <p>Arket</p>
+            </div>
+        </div>
+    </section>
+    <!-- Collections section-->
+    <section id="collections">
+        <div class="collection reveal">
+            <div class="collection__header">
+                <p>CURATED FOR YOU</p>
+                <h2>Shop By Collection</h2>
+            </div>
+            <div class="collection__content display-flex">
+                <div class="collection__product reveal">
+                    <img src="./images/collection.png" alt="collection-image"/>
+                    <div class="collection__product_content">
+                        <h3>New Arrivals</h3>
+                        <div class="collection__show-now display-flex">
+                            <span>
+                                Shop now
+                            </span>
+                                <span style="margin-top: 4px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                      fill="none" stroke="currentColor" stroke-width="1.6"
+                                      stroke-linecap="round" stroke-linejoin="round" >
+                                      <path d="M5 12h14M12 5l7 7-7 7" />
+                                    </svg>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="collection__product reveal">
+                    <img src="./images/collection2.png" alt="collection-image"/>
+                    <div class="collection__product_content">
+                        <h3>Most Wanted</h3>
+                        <div class="collection__show-now display-flex">
+                            <span>
+                                Shop now
+                            </span>
+                                <span style="margin-top: 4px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                      fill="none" stroke="currentColor" stroke-width="1.6"
+                                      stroke-linecap="round" stroke-linejoin="round" >
+                                      <path d="M5 12h14M12 5l7 7-7 7" />
+                                    </svg>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- limited edition -->    
+    <section id ="limited-edition" class="limited-edition reveal">
+        <img src="images/limited-edition.jpg" alt="Limited edition fashion collection" class="limited-edition-img"/>
+        <div class="limited-edition-content reveal">
+            <span>EXCLUSIVE RELEASE</span>
+            <h2>Limited Edition</h2>
+            <p>Distinctive pieces. Timeless style.</p>
+            <a href="#" class="shop-btn">Discover Collection &rarr;</a>
+        </div>
+    </section>
+    <!-- Newsletter section -->
+    <section id="newsletter">
+        <div class="newsletter reveal">
+            <h3>A Note From Us</h3>
+            <p>New collections, considered essentials and exclusive updates.</p>
+            <div class="input-field reveal">
+                <input type="text" placeholder="Enter your email address"/>
+                <button type="button" class="newsletter__subscription">Subscribe</button>
+            </div>
+        </div>
+    </section>
+    <!-- footer section -->
+    <footer id="footer">
+        <div class="footer">
+            <div class="footer__content display-flex">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="RAJA Clothing" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo4MjJjZjY0Zi04NzcwLTRmZmItYmE3Ny0zMmYyMmM3YjNiMGUAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaNewdRMN66yjlBaoMIZqBL8AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo1ZTM0ZDI1ZC03OGE1LTRmZDItODZjNy03NGNiN2U4OGQ1OTVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoIMnHfZQdJvd+Vf5yQFRHeAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg+88YRWbNWSvZYnMvMshzi3qEAQvlFsYshKmE0XiCNi6kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaL+k9TBy7OIIkHIDVJB5QVUAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCA74r2K5dm5Kj3lOkFOV5wUJ7BzU8SvUdf0Su3cYjmejWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBi8Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjgyMmNmNjRmLTg3NzAtNGZmYi1iYTc3LTMyZjIyYzdiM2IwZS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjRmZTRlMjUwLTdlMGMtNDllMy1hZDYyLTIwYTczOGY2YjJmZnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCD7zxhFZs1ZK9licy8yyHOLeoQBC+UWxiyEqYTReII2LqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg9tI3F+r/pIBG2n/mR8GVgSwT4ovm2WE1H3nu5Bzvu6WiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggVouRIKb0/8AVMWc7IM1nU9yb6H/0zYsQ6IGu2BEcEzh0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQPrAvNS8ovFNL/E3S/ULIdpZdkBQBe6o3B9Deev5KEUcyySkvIGy9pULSrT3JNwANBQqXcaPfRDeztEaXINlrkg=</c2pa:manifest></metadata>
+                    <style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&amp;family=Jost:wght@300&amp;display=swap');.w{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600}.t{font-family:'Jost',Arial,sans-serif;font-weight:300}</style>
+                    <rect width="600" height="300" fill="none"/>
+                    <g transform="translate(270.5 38) scale(2.1)" fill="none" stroke="#F7F4EE" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"><path d="M2 17 4.5 5 10 11 14 2 18 11 23.5 5 26 17Z"/><path d="M3 19h22"/></g>
+                    <text class="w" x="315" y="200" text-anchor="middle" font-size="96" letter-spacing="30" fill="#F7F4EE">RAJA</text>
+                    <text class="t" x="305" y="248" text-anchor="middle" font-size="16" letter-spacing="10" fill="#F7F4EE" opacity=".8">CLOTHING</text>
+                    </svg>
+                </div>
+                <div class="link">
+                    <ul class="display-flex">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./index.html#collections">Collections</a></li>
+                        <li><a href="./product.html">Shop</a></li>
+                        <li><a href="./contact-us.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" width="24" height="24"
+                            fill="none" stroke="currentColor"
+                            stroke-width="1.7" stroke-linecap="round"
+                            stroke-linejoin="round">
+                        <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.6A8.5 8.5 0 1 1 20.5 11.5Z"/>
+                        <path d="M8.5 8.2c.3-.7.6-.7 1-.7h.4c.2 0 .4.1.5.5l.8 1.8c.1.3.1.5-.1.7l-.6.7c-.2.2-.2.4 0 .7.6 1 1.5 1.8 2.6 2.3.3.1.5.1.7-.1l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.2.5.3.5.5 0 .3-.1 1.1-.7 1.6-.5.5-1.4.8-2.2.6-1-.2-2.3-.8-3.7-2-1.1-1-2-2.3-2.4-3.3-.4-1.1-.1-2 .3-2.6Z"/>
+                        </svg>
+                    </div>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" width="24" height="24"
+                            fill="currentColor">
+                        <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.438H7.078v-3.49h3.047V9.412c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.49 0-1.956.93-1.956 1.886v2.265h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073Z"/>
+                        </svg>
+                    </div>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" width="24" height="24"
+                            fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </div>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" width="24" height="24"
+                            fill="currentColor">
+                            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6Z"/>
+                        </svg>
+                    </div>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M3 2.8v18.4l10-9.2Z" fill="#34A853"/>
+                            <path d="m3 2.8 12.2 7.1-2.2 2.1Z" fill="#4285F4"/>
+                            <path d="m3 21.2 12.2-7.1-2.2-2.1Z" fill="#EA4335"/>
+                            <path d="m15.2 9.9 4.1 2.4-4.1 2.4-2.2-2.7Z" fill="#FBBC04"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copy-rights">
+                <p>&copy; 2026 Raja, All copy rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./index.js"></script>
+    <script src="./slider.js"></script>
+    <script src="./revel.js"></script>
+</body>
+</html>
